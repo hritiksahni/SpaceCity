@@ -1,0 +1,863 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #0B0D17;
+}
+
+
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+.flex {
+    display: flex;
+}
+
+
+.logo {
+    width: 100%;
+    margin-top: 1.7em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+nav {
+    margin-left: auto;
+    margin-top: 2em;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+    padding-right: 13em;
+    padding-left: 13em;
+    background-color:hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(5px);
+    font-size: 1rem;
+}
+.home {
+    background-size: cover;
+    background-image: url(../images/home/background-home-desktop.jpg);
+}
+.destination {
+    background-size: cover;
+    background-image: url(../images/destination/background-destination-desktop.jpg);
+} 
+
+@media (max-width:970px) {
+    .destination {
+        background-size: cover;
+        background-position: center center; 
+        background-image: url(../images/destination/background-destination-desktop.jpg);
+    }
+ 
+    }
+
+
+.header_line {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+
+}
+
+
+
+
+.nav_text {
+    font-family: 'Barlow Condensed', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 7em;
+    display: flex;
+}
+@media (max-width:1400px) {
+    nav {
+        padding-left:5em;
+        padding-right: 5em;
+    }
+}
+@media (max-width:1100px) {
+    nav {
+        padding-left: 5em;
+        padding-right: 5em;
+        margin-top: 2em;
+        padding-top: 2.5em;
+        padding-bottom: 1.5em;
+    }
+    .nav_text {
+        gap: 2.5em;
+    }
+   
+}
+@media (max-width:970px) {
+    nav {
+        margin-top: 0;
+        max-width: 450px;
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+    .nav_text {
+        gap:2em;
+    }
+    li span  {
+        display: none;
+    }
+}
+@media(max-width:550px) {
+    nav {
+        max-width: 350px;
+        padding: 1.2em 1em;
+    }
+    .nav_text {
+        gap: 0.5em;
+    }
+}
+
+/** @media(max-width:450px) {
+        nav {
+            position: fixed;
+            inset: 0 0 0 30%;
+            
+        }
+        .nav_text {
+            gap: 1.5em;
+            flex-direction: column;
+        }
+} **/
+
+
+
+.nav_text a {
+    text-decoration: none;
+}
+
+.nav_text a > span {
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+.nav_item{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2.5px;
+}
+
+/* .nav_item::after {
+    content: " ";
+    display: block;
+    border-bottom: 0.13em solid white;
+    padding-bottom: 10%;
+    transform: scaleX(0);
+    transition: 300ms all;
+} */
+
+.nav_item:hover::after,
+.nav_item:hover,
+.nav_item:focus {
+    transform: scaleX(1);
+    color: white;
+}
+    
+.underline > .active_page {
+    border-bottom: 0.2rem solid hsla(0, 0%, 100%, 1);
+    padding-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title_text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1em 0;
+    letter-spacing: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+.title_text1 {
+    margin: 0;
+    padding: 0;
+    font-size: 9.45rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    color: white;
+}
+.title_text2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2em;
+    font-family: 'Barlow Condensed', sans-serif;
+    color:#D0D6F9;
+    
+}
+.explore_button {
+    display: inline-grid;
+    position: relative;
+    transition: 500ms ease-in-out;
+    place-items: center;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;    
+    background: white;
+    color:black ;
+    font-size:2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 0 2em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-decoration: none;
+   
+}
+.explore_button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 100%, .5);
+    border-radius: 50%;
+    transition: 500ms ease-in-out;
+    color: black;
+}
+.explore_button:hover::after,
+.explore_button:focus::after{
+    transform: scale(1.5);
+    color: black;
+}
+@media (max-width:970px) {
+    .home {
+        background-image: url(../images/home/background-home-tablet.jpg);
+        background-size: cover;
+        background-position: center center; 
+    }
+    .title_text {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .title_text1 {
+         font-size: 9rem;
+         text-align: center;
+         line-height: 150px;
+    }
+    .title_text2 {
+        line-height: 27px;
+        font-size: 1rem;
+        text-align: center;
+        
+        
+    }
+}
+@media(max-width:550px) {
+
+    .title_text1 {
+        font-size:7rem;
+        padding: 0;
+
+    } 
+
+}
+@media (max-width:375px) {
+    .home {
+        background-image: url(../images/home/background-home-mobile.jpg);
+        background-size: cover;
+        background-position: bottom center;
+    }
+    .title_text1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .title_text {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .title_text2 {
+        text-align: center;
+        font-size: 0.94rem;
+        line-height: 24px;
+    }
+    .explore_button {
+        margin-top: 10px;
+        padding: 0 1.3em;
+    }
+}
+
+
+
+
+
+.main {
+    
+    display: flex;
+    justify-content: space-around;
+}
+.section1 {
+
+    text-align:left;
+    max-width: 500px;
+}
+@media (min-width:768px) {
+    .section1 {
+        text-align: left;
+        padding-top: 150px;
+    }
+    .section2 {
+        padding-top: 300px;
+    }
+}
+@media (max-width:970px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section1 {
+        max-width: 450px;
+        margin-top: 2.5em;
+        padding: 0 0.5em;
+    }
+    .section2 {
+        margin-top: 4em;
+        padding: 0 0.5em;
+
+    }
+    .title_text2 {
+        line-height: 28px;
+        font-size: 1rem;
+        
+    }
+    .explore_button {
+        margin-top: 10px;
+        padding: 0 1.6em;
+    }
+
+}
+
+
+
+
+
+.ptabs {
+    display: flex;
+    gap: 2rem;
+}
+
+.ptabs_crew {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 5em;
+}
+
+
+.planet_tabs_moon,
+.planet_tabs_mars,
+.planet_tabs_titan,
+.planet_tabs_europa {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    background: none;
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    }
+
+    .planet_tabs_moon::after,
+    .planet_tabs_mars::after,
+    .planet_tabs_titan::after,
+    .planet_tabs_europa::after {
+        content: " ";
+        display: block;
+        border-bottom: 0.13em solid #D0D6F9;
+        padding-bottom: 10%;
+        transform: scaleX(0.2);
+        transition: 300ms all;
+    }
+    .planet_tabs_moon:hover::after,
+    .planet_tabs_mars:hover::after,
+    .planet_tabs_titan:hover::after,
+    .planet_tabs_europa:hover::after {
+    transform: scaleX(1);
+    }
+    .active_tab::after
+     {
+        content: " ";
+        display: block;
+        border-bottom: 0.13em solid #D0D6F9;
+        padding-bottom: 10%;
+        transform: scaleX(1);
+        transition: 300ms all;
+    }
+
+    .planet_tabs_moon:hover,
+    .planet_tabs_mars:hover,
+    .planet_tabs_titan:hover,
+    .planet_tabs_europa:hover,
+    .planet_tabs:focus {
+        color: #D0D6F9;
+    }
+
+
+
+
+.des_main {
+    margin-top: -0.5em;
+    padding-top: 8em;
+       
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.des_section1 {
+    max-width: 450px;
+}
+
+.des_section2 {
+    max-width: 460px;
+}
+
+
+
+
+
+
+.des_title1 {
+    margin-top: -2em;
+    padding-bottom: 2em;
+    text-align: left;    
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+
+}
+.des_title1 > span {
+    opacity: 25%;
+}
+.planet_name {
+    font-size: 6.5em;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    color: white;
+}
+.planet_text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2em;
+    font-family: 'Barlow Condensed', sans-serif;
+    color:#D0D6F9;
+    
+}
+.planet_stats {
+    border-top: 1px solid hsla(0, 0%, 100%, .2);
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 5em;
+    
+}
+.time , .distance {
+    text-align: left;
+    
+}
+.time_1,.distance_1 {
+    font-size:0.875rem ;
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.time_2,.distance_2 {
+    font-size:1.8rem ;
+    color:white;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+}
+
+@media (max-width:1100px) and (min-width:767px){
+    .des_main {
+        padding-top:6em;
+    }
+    .des_section1 {
+        max-width: 350px;
+    }
+    .des_section2 {
+        max-width: 350px;
+    }
+    .planet_name {
+        font-size: 5.5rem;
+
+    }
+    .logo {
+        margin-top: 1em;
+    }
+    nav {
+        margin-top: 1em;
+    }
+}
+
+@media (max-width:970px) {
+    .logo {
+        margin-top: 1em;
+    }
+    .des_main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .des_section1 {
+        max-width: none;
+    }
+    .des_title1 {
+        font-size: 1.25rem;
+        margin-left: 1.5em;
+    }
+    .des_planet {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+    .des_section2 {
+        max-width: none;
+    }
+    .ptabs {
+        margin: 3em 0;
+        justify-content: center;
+    }
+
+    .ptabs_crew {
+        margin: 3em 0;
+        justify-content: center;
+    }
+
+    .planet_text {
+        max-width: 570px;
+        margin: 0 auto;
+        line-height: 28px;
+    }
+    .planet_stats {
+        justify-content: center;
+        padding-bottom: 5em;
+        padding-top: 4em;
+        margin-top: 4em;
+    }
+}
+
+
+@media (max-width:530px) {
+
+
+    .destination {
+        background-size: cover;
+        background-position: bottom center; 
+        background-image: url(../images/destination/background-destination-desktop.jpg);
+    }
+    .des_title1 {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .des_planet {
+        max-width: 180px;
+    }
+    .planet_tabs {
+        font-size: 1rem;
+    }
+    .planet_name {
+        font-size: 3.5rem;
+    }
+    .planet_text {
+        font-size: 0.9rem;
+        max-width: 320px;
+        padding-top: 2em;
+    }
+    .planet_stats {
+        flex-direction: column;
+        padding-bottom: 4em;
+        padding-top: 3em;
+        gap: 4em;
+    }
+    .distance {
+        text-align: center;
+    }
+    .time {
+        text-align: center;
+    }
+
+
+
+
+}
+
+
+
+
+/* crew */
+
+.crew_main {
+    margin-top: -0.5em;
+    padding-top: 8em;
+       
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.crew{
+    background-size: cover;
+    background-image: url(../images/crew/background-crew-desktop.jpg);
+} 
+
+.crew_sectionup {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 615px;
+}
+
+.crew_title1 {
+    padding-top: 1em;
+    font-size: 2.5rem;
+    color: white;
+    opacity: 50%;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+
+}
+.crew_title2 {
+    padding-top: 0.2em;
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+
+}
+.crew_title3 {
+    padding-top: 1.5em;
+    font-family: 'Bellefair', serif;
+    line-height: 32px;
+    font-size: 1.125rem;
+    color: #D0D6F9;
+    max-width: 422px;
+    text-align: left;
+    height: 200px;
+}
+
+
+.crew_sectiondown {
+    max-width: 570px;
+}
+
+.crew_title_Hurley,
+.crew_title_Mark,
+.crew_title_pilot,
+.crew_title_engineer{
+    display: none;
+}
+
+/* .crew_commander_hurley {
+    margin-top: -2.3em;
+} */
+
+/* .crew_commander_mark,
+.crew_commander_pilot{
+margin-top: 0.8em;
+} */
+
+/* .crew_commander_engineer{
+margin-top: 3em;
+} */
+
+
+.crew_commander_hurley,
+.crew_commander_mark,
+.crew_commander_pilot,
+.crew_commander_engineer{
+    display: none;
+}
+
+.crewone,
+.crewtwo,
+.crewthree,
+.crewfour {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 10px;
+    background-color:hsl(0,0%,35%);
+}
+
+.crewone:hover,
+.crewtwo:hover,
+.crewthree:hover,
+.crewfour:hover {
+    background-color:hsl(0,0%,80%);
+}
+.activecrewdot{
+    background-color:hsl(0,0%,100%);
+}
+
+
+
+@media (max-width:1100px) and (min-width:767px){
+    .crew_main {
+        padding-top:6em;
+    }
+}
+
+
+
+@media (max-width:970px) {
+    .crew_main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .crew_sectionup {
+        max-width: 100%;
+        padding-bottom: 3em;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .crew{
+        background-size: cover;
+        background-position: center center;
+        background-image: url(../images/crew/background-crew-desktop.jpg);
+    } 
+
+    .crew_title{
+        text-align: center;
+    }
+    .crew_title1 {
+        font-size: 1.5rem;
+    }
+    .crew_title2 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 0;
+
+    }
+    .crew_title3 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.35rem;
+        max-width: 100%;
+    }
+    .crew_sectiondown {
+        margin: 0 auto;
+        max-width: 450px;
+    }
+    /* .crew_commander_mark,
+    .crew_commander_pilot{
+        margin-top: 0em;
+    }
+    .crew_commander_hurley {
+        margin-top: -0.8em;
+    }
+    .crew_commander_engineer{
+        margin-top: 0em;
+    } */
+}
+
+@media(max-width:420px) {
+    .crew_sectionup {
+        order: +1;
+    }
+    .des_title1 {
+        display: none;
+    }
+    .crew_commander {
+        max-width: 220px;
+    }
+   
+   .crew_title1 {
+    font-size: 1.2rem;
+   }
+   .crew_title2 {
+    font-size: 1.5rem;
+   }
+   .crew_title3 {
+    font-size: 0.95rem;
+    max-width: 320px;
+   }
+   .crew_sectiondown {
+    border-bottom:1px solid hsla(0, 0%, 100%, 0.2);
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+.marsimg{
+    display: none;
+}
+.marspage,
+.moonpage,
+.europapage,
+.titanpage
+{
+    display: none;
+}
+
+.moonimg,
+.europaimg,
+.titanimg{
+    display: none;
+}
+
+.active {
+    display: block;
+}
+.activecrew,
+.activecrewimg{
+    display: block;
+}
